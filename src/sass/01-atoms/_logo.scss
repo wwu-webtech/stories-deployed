@@ -1,0 +1,62 @@
+/**
+* @file
+* 01-atoms/logo/_logo.scss
+*/
+$logo-width: 266px;
+$logo-height: 136px;
+$logo-height--stacked: 170px;
+$logo-width--larger: 306px;
+$logo-height--larger: 154px;
+$logo-height--stacked--larger: 196px;
+
+.logo {
+  padding: $standard-spacing;
+  background-color: $dark-blue;
+
+  &.stacked {
+    @media (min-width: $large) {
+      height: $logo-height--stacked--larger;
+      width: $logo-width--larger;
+    }
+    height: $logo-height--stacked;
+    width: $logo-width;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &.make-waves {
+    width: $logo-width;
+    height: $logo-width;
+  }
+
+  .cls-1 {
+    fill: $dark-blue;
+  }
+
+  .cls-2 {
+    fill: $blue;
+  }
+
+  .cls-3 {
+    fill: $black;
+  }
+
+  .cls-4 {
+    fill: #808285;
+  }
+
+  .cls-5 {
+    fill: $white;
+  }
+}
+
+.western-home-link:focus {
+  outline: none;
+}
+
+.western-home-link:focus > .logo {
+  outline: dotted $border-width $white;
+}

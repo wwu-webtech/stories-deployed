@@ -1,0 +1,19 @@
+/**
+* @file
+* 01-atoms/text/_all.scss
+*/
+
+html {
+  @media (min-width: $large) {
+    font-size: $p-font-size--max;
+  }
+  color: $black;
+  font-family: $sans-serif;
+  font-size: $p-font-size;
+}
+
+hr {
+  border: solid 1px transparentize($white, 0.5);
+  width: 40%;
+  margin: ($standard-spacing * 4) auto;
+}

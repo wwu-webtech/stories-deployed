@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 570.83 217.02">
+  <defs>
+    <style>.cls-1{fill:url(#radial-gradient);stroke:#aed8ef;stroke-width:2px;stroke-miterlimit:10;}
+    </style>
+    <radialGradient id="radial-gradient" cx="285.41" cy="108.51" r="215.91" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#aed8ef"/>
+      <stop offset="0.03" stop-color="#abd7ee"/>
+      <stop offset="0.39" stop-color="#8ac8e9"/>
+      <stop offset="0.58" stop-color="#7dc2e7"/>
+    </radialGradient>
+  </defs>
+  <title>waves--back
+  </title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Waterfall_foothills" data-name="Waterfall/foothills">
+      <path class="cls-1" d="M115.71,10.86C105.8-18.73-50.58,18.75,16.8,44.51s179,70.58,266.71,89.17c104,22,181.47,101.09,287.32,79.71-28.4-67.49-71.37-37-95.09-55.1-53.14-40.44-43.63-69.2-112.37-65.9C289,96,125.62,40.45,115.71,10.86Z"/>
+    </g>
+  </g>
+</svg>

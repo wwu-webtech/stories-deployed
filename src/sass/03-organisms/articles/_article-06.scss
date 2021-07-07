@@ -1,0 +1,166 @@
+/**
+* @file
+* 03-organisms/articles/_article-06.scss
+*/
+
+.article-06 {
+  margin-top: -$half-spacing;
+  background-color: $tree-medium-green;
+
+  .article-title {
+    margin-bottom: $standard-spacing;
+    word-spacing: 0.1em;
+    color: $white;
+    text-shadow: -2px -2px 0 transparentize($darkest-blue, 0.1);
+
+
+    .title-decorative-word {
+      word-spacing: 0.2em;
+    }
+
+    .first {
+      font-size: 0.6em;
+      line-height: 1em;
+    }
+
+    .second {
+      font-size: 0.9em;
+    }
+
+    .third {
+      font-size: 1em;
+    }
+  }
+
+  p {
+    font-weight: $font-weight--light;
+  }
+
+  article {
+    max-width: $max-content-width - ($triple-spacing * 2);
+    margin-bottom: $triple-spacing;
+    padding-bottom: 0;
+    border-radius: $border-radius--round-square;
+    background-color: $water-dark-blue;
+    background-image: linear-gradient(to bottom, $water-dark-blue 5%, $water-medium-blue 80%, $water-light-blue);
+  }
+
+  article > div {
+    padding: $standard-spacing;
+
+    @media (min-width: $small) {
+      padding: $double-spacing;
+    }
+    @media (min-width: $medium) {
+      padding: $triple-spacing;
+    }
+  }
+
+  .photo {
+    position: relative;
+    z-index: 1;
+  }
+
+  .photo-caption {
+    margin-top: $standard-spacing;
+    margin-bottom: $standard-spacing;
+    padding: $standard-spacing;
+    border-radius: $border-radius--square;
+    background-color: transparentize(mix($water-light-blue, $white), 0.05);
+  }
+
+  .salmon-blockquote {
+    position: relative;
+
+    blockquote {
+      position: relative;
+      margin-top: $double-spacing;
+      margin-bottom: $triple-spacing;
+      padding: $double-spacing;
+      background-color: transparentize(mix($water-light-blue, $white), 0.05);
+      box-shadow: $shadow;
+      font-weight: 300;
+    }
+
+    &:nth-of-type(odd) {
+      blockquote {
+        margin-left: -($standard-spacing * 3) + $half-spacing;
+        border-radius: 0 $border-radius--round-square $border-radius--round-square $border-radius--round-square;
+
+        @media (min-width: $medium) {
+          margin-left: -10%;
+        }
+      }
+
+      .salmon {
+        position: absolute;
+        top: 10vw;
+        right: -19vw;
+        width: 53vw;
+        max-width: 270px;
+        transform: rotate(-58deg) scalex(-1);
+
+        @media (min-width: 581px) {
+          top: 7vw;
+          right: -15vw;
+        }
+
+        @media (min-width: 800px) {
+          top: 50px;
+          right: -110px;
+        }
+      }
+    }
+
+    &:nth-of-type(even) {
+      blockquote {
+        margin-right: -($standard-spacing * 3) + $half-spacing;
+        border-radius: $border-radius--round-square 0 $border-radius--round-square $border-radius--round-square;
+
+        @media (min-width: $medium) {
+          margin-right: -10%;
+        }
+      }
+
+      .salmon {
+        position: absolute;
+        top: 6vw;
+        left: -15vw;
+        width: 50vw;
+        max-width: 170px;
+        transform: rotate(40deg);
+
+        @media (min-width: 581px) {
+          top: 5vw;
+          left: -10vw;
+        }
+
+        @media (min-width: 800px) {
+          top: 7px;
+          left: -60px;
+        }
+      }
+    }
+  }
+
+  .call-out-box {
+    margin-bottom: 0;
+    color: $white;
+    background-color: $tree-medium-green;
+
+    h3 {
+      color: $lightest-green;
+    }
+  }
+}
+
+.to-be-continued {
+  margin-bottom: 0;
+  padding-bottom: $double-spacing;
+  color: $white;
+
+  h2 {
+    color: $lightest-green;
+    text-shadow: none;
+  }
+}

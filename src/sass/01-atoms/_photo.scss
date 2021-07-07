@@ -1,0 +1,72 @@
+/**
+* @file
+* 01-atoms/_photo.scss
+*/
+.photo {
+  margin-bottom: $standard-spacing;
+
+  img {
+    width: 100%;
+    border-radius: $border-radius--square;
+    box-shadow: $shadow;
+  }
+
+  &.medium {
+    max-width: 60%;
+
+    @media (min-width: $medium) {
+      max-width: 50%;
+    }
+  }
+
+  &.large {
+    max-width: 70%;
+  }
+
+  &.full {
+    width: 100vw;
+    margin-left: -$standard-spacing;
+    margin-bottom: $double-spacing * 2;
+
+    img {
+      border-radius: 0;
+    }
+
+    @media (min-width: $max-content-width) {
+      margin-left: calc((100vw - #{$max-content-width}) / -2);
+    }
+  }
+
+  &.center {
+    margin: 0 auto ($standard-spacing * 3);
+  }
+
+  &.left {
+    float: left;
+    margin-right: $standard-spacing;
+    margin-left: -$standard-spacing;
+
+    @media (min-width: $medium) {
+      margin-right: $double-spacing;
+      margin-left: -10%;
+    }
+  }
+
+  &.right {
+    float: right;
+    margin-right: -($standard-spacing * 3) + $half-spacing;
+    margin-left: $standard-spacing;
+
+    @media (min-width: $medium) {
+      margin-right: -10%;
+      margin-left: $double-spacing;
+    }
+  }
+}
+
+.photo-caption {
+  font-style: italic;
+  margin-bottom: -$double-spacing;
+  padding: $double-spacing;
+  font-size: $p-font-size--smaller;
+}

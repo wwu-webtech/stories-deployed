@@ -1,0 +1,153 @@
+/**
+* @file
+* 01-atoms/01-text/_headings.scss
+*/
+
+$heading-line-height: 1.2em;
+$heading-margin-top: $triple-spacing;
+$heading-margin-bottom: $standard-spacing;
+
+/* Default heading styles, serif with blues */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: $heading-margin-top 0 $heading-margin-bottom;
+  text-align: center;
+  color: $blue;
+  font-family: $condensed;
+  line-height: $heading-line-height;
+}
+h1 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: $double-spacing;
+  text-transform: uppercase;
+  color: $white;
+  font-family: $title-font;
+  font-size: $h1-font-size--largest;
+  font-weight: $font-weight--bold;
+  line-height: 1em;
+  @media (min-width: $large) {
+    font-size: $h1-font-size--max--largest;
+  }
+}
+h2 {
+  display: block;
+  max-width: $max-content-width;
+  margin: auto;
+  padding-bottom: $double-spacing;
+  padding-left: $standard-spacing;
+  word-spacing: -$half-spacing;
+  text-transform: uppercase;
+  color: $darkest-blue;
+  text-shadow: -1px -1px 0 transparentize($white, 0.5);
+  font-family: $title-font;
+  font-size: $h2-font-size--largest;
+  font-weight: $font-weight--bold;
+  line-height: 1em;
+  @media (max-width: $small) {
+    font-size: $min-base-font-size--largest;
+  }
+  @media (min-width: $large) {
+    font-size: $h2-font-size--max--largest;
+  }
+}
+h3 {
+  color: $darkest-blue;
+  font-size: $h3-font-size;
+  font-weight: $font-weight--semibold;
+  @media (min-width: $large) {
+    font-size: $h3-font-size--max;
+  }
+}
+h4 {
+  font-size: $h4-font-size;
+  font-weight: $font-weight--regular;
+  @media (min-width: $large) {
+    font-size: $h4-font-size--max;
+  }
+}
+h5 {
+  font-size: $h5-font-size;
+  font-weight: $font-weight--regular;
+  @media (min-width: $large) {
+    font-size: $h5-font-size--max;
+  }
+}
+h6 {
+  font-size: $h6-font-size;
+  @media (min-width: $large) {
+    font-size: $h6-font-size--max;
+  }
+}
+
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6 {
+  margin-top: 0;
+}
+
+main {
+  h2 {
+    padding-bottom: ($standard-spacing * 1.5);
+  }
+}
+
+/* Helper to resize headings. Only applies at medium breakpoints. */
+.font-size--smaller {
+  h1 {
+    font-size: $h1-font-size--smaller;
+    @media (min-width: $large) {
+      font-size: $h1-font-size--max--smaller;
+    }
+  }
+
+  h2 {
+    padding-bottom: none;
+    border-bottom: none;
+    font-size: $h2-font-size--smaller;
+    @media (min-width: $large) {
+      font-size: $h2-font-size--max--smaller;
+    }
+  }
+
+  h3 {
+    font-size: $h3-font-size--smaller;
+    @media (min-width: $large) {
+      font-size: $h3-font-size--max--smaller;
+    }
+  }
+
+  h4 {
+    font-size: $h4-font-size--smaller;
+    @media (min-width: $large) {
+      font-size: $h4-font-size--max--smaller;
+    }
+  }
+
+  h5 {
+    font-size: $h5-font-size--smaller;
+    @media (min-width: $large) {
+      font-size: $h5-font-size--max--smaller;
+    }
+  }
+
+  h6 {
+    font-size: $h6-font-size--smaller;
+    @media (min-width: $large) {
+      font-size: $h6-font-size--max--smaller;
+    }
+  }
+}
+
+.tagline {
+  text-align: center;
+  font-family: $sans-serif;
+  font-size: $h3-font-size--larger;
+  font-weight: $font-weight--bold;
+  line-height: 1em;
+}

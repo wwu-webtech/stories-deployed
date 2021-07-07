@@ -1,0 +1,24 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 754.52 330.49">
+  <defs>
+    <style>
+      .cls-1{fill:url(#radial-gradient);stroke:#aed8ef;stroke-width:2px;stroke-miterlimit:10;}
+      .cls-2{fill:url(#radial-gradient-2);stroke:#aed8ef;stroke-width:2px;stroke-miterlimit:10;}
+    </style>
+    <radialGradient id="radial-gradient" cx="469.11" cy="221.98" r="215.91" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#aed8ef"/>
+      <stop offset="0.03" stop-color="#abd7ee"/>
+      <stop offset="0.39" stop-color="#8ac8e9"/>
+      <stop offset="0.58" stop-color="#7dc2e7"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="303.27" cy="145" r="237.7" xlink:href="#radial-gradient"/>
+  </defs>
+  <title>waves--front
+  </title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Waterfall_foothills" data-name="Waterfall/foothills">
+      <path class="cls-1" d="M299.4,124.33c-9.91-29.59-166.29,7.89-98.9,33.65s178.94,70.57,266.7,89.17c104,22,181.47,101.09,287.32,79.7-28.4-67.48-71.36-37-95.09-55.09-53.14-40.44-43.62-69.2-112.37-65.9C472.69,209.43,309.31,153.92,299.4,124.33Z"/>
+      <path class="cls-2" d="M84.65,35.25C13.46-66-47.4,79.29,52.51,117.5c67.39,25.76,179,70.57,266.71,89.17,104,22,181.47,101.08,287.32,79.7-28.4-67.49-71.37-37-95.09-55.09-53.14-40.44-43.62-69.2-112.37-65.9-37.52,1.8-184.32-55.71-197.64-75.91S143.06,65.41,131.88,67.4C97.39,73.55,89.2,41.72,84.65,35.25Z"/>
+    </g>
+  </g>
+</svg>

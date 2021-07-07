@@ -1,0 +1,66 @@
+/**
+* @file
+* 03-organisms/articles/_article-09.scss
+*/
+.article-09 {
+  color: white;
+  background-color: $ocean-dark-blue;
+  background-image: linear-gradient($ocean-dark-blue, $ocean-darkest-blue);
+
+  .title-wrapper {
+    transform: translatey(-26vw);
+    margin-bottom: -26vw;
+
+    @media(min-width: $medium) {
+      transform: translatey(-280px);
+      margin-bottom: -280px;
+    }
+  }
+
+  .article-title {
+    padding: 0;
+    text-shadow: none;
+  }
+
+  .tagline {
+    margin-bottom: 12vw;
+  }
+
+  .call-out-box {
+    border-radius: $border-radius--square;
+    background-color: $ocean-medium-blue;
+    margin-bottom: 0;
+    padding: $standard-spacing;
+    margin-top: 8vw;
+
+    h3 {
+      color: $lightest-green;
+    }
+
+    @media (min-width: $medium) {
+      padding: $double-spacing;
+    }
+  }
+
+  blockquote {
+    background-image: linear-gradient($ocean-light-blue, $ocean-medium-blue);
+    border-radius: $border-radius--round-square;
+
+    > div {
+      padding: $standard-spacing;
+
+      @media (min-width: $medium) {
+        padding: $double-spacing;
+      }
+    }
+
+    p {
+      text-shadow: 1px 1px 3px $darkest-blue;
+    }
+  }
+
+  .photo {
+    position: relative;
+    z-index: 1;
+  }
+}

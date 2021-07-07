@@ -1,0 +1,133 @@
+/**
+* @file
+* 04-illustration/_city.scss
+*/
+#chapter-07 img {
+  width: 100%;
+}
+
+.city-hill,
+.city-town {
+  position: relative;
+  background-color: $tree-medium-green;
+}
+
+.campus {
+  position: absolute;
+  top: 10vw;
+  right: 6vw;
+  width: 64%;
+  max-width: 1400px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.deer {
+  position: absolute;
+  top: -11vw;
+  right: -7vw;
+  width: 40%;
+  max-width: 400px;
+
+  @media (min-width: $medium) {
+    top: -4.8%;
+    right: -4%;
+  }
+}
+
+.street {
+  width: 90%;
+  max-width: 2000px;
+}
+
+.city-flex {
+  display: flex;
+  align-items: center;
+  padding-bottom: 12vw;
+
+  @media (min-width: $medium) {
+    padding-bottom: 6vw;
+  }
+}
+
+.factory { 
+  bottom: -15vw;
+  flex: 0 1 50%;
+  position: relative;
+  z-index: 2;
+  flex: 0 1 20%;
+  align-self: end;
+  margin-left: $standard-spacing;
+
+  @media (min-width: $medium) {
+    margin-left: 5vw;
+    bottom: -8.5vw;
+    flex: 0 1 20%;
+  }
+
+  .building {
+    position: relative;
+    width: 100%;
+  }
+
+  .smoke {
+    position: absolute;
+    width: 43%;
+
+    &:nth-of-type(1) {
+      top: -6%;
+      left: 29%;
+      opacity: 0.9;
+    }
+
+    &:nth-of-type(2) {
+      top: -10%;
+      left: 27%;
+      opacity: 0.9;
+    }
+
+    &:nth-of-type(3) {
+      top: -13%;
+      left: 24%;
+      opacity: 0.7;
+    }
+
+    &:nth-of-type(4) {
+      top: -15%;
+      left: 22%;
+      opacity: 0.5;
+    }
+
+    &:nth-of-type(5) {
+      top: -17%;
+      left: 19%;
+      opacity: 0.3;
+    }
+  }
+}
+
+.street {
+  position: relative;
+}
+
+.box-truck {
+  position: absolute;
+  right: 45%;
+  bottom: 12.5%;
+  width: 7vw;
+}
+
+.truck {
+  position: absolute;
+  right: 20%;
+  bottom: 15%;
+  width: 8vw;
+}
+
+.call-out-wrapper {
+  z-index: 1;
+  flex: 0 1 80%;
+  margin-bottom: 4.8vw;
+}

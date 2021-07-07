@@ -1,0 +1,79 @@
+/**
+* @file
+* 03-organisms/articles/_article-02.scss
+*/
+
+.article-02 {
+  background-color: $snow-gray;
+
+  .h2 {
+    display: block;
+    width: 700px;
+    margin: auto;
+    margin-bottom: -6vw;
+    transform: translatey(-6vw);
+
+    @media (max-width: $max-content-width) {
+      width: 80%;
+    }
+  }
+
+  .tagline {
+    margin-top: $double-spacing;
+    margin-bottom: -$double-spacing;
+    color: $dark-blue;
+
+    .title-decorative-word {
+      word-spacing: initial;
+    }
+
+    @media (max-width: $medium) {
+      font-size: $h4-font-size--smaller;
+    }
+  }
+
+  .nino-arrow {
+    display: inline-block;
+    color: $blue;
+
+    &.material-icons {
+      transform-origin: left top;
+      font-size: 4em;
+    }
+
+    &.first {
+      transform: translate(1em, 2.21em) rotate(220deg);
+    }
+
+    &.second {
+      transform: translate(0.05em, 2.2em) scaleX(-1) rotate(220deg);
+    }
+
+    &.second.material-icons {
+      font-size: 3.5em;
+    }
+  }
+
+  .nino {
+    display: inline-block;
+    margin-top: $standard-spacing;
+    margin-bottom: $double-spacing;
+    margin-left: 51%;
+    padding: $standard-spacing;
+    transform: translatex(-50%) rotate(-5deg);
+    border-radius: 5px;
+    background-color: transparentize($light-green, 0.3);
+    font-family: montserrat;
+    font-size: 1.2em !important;
+
+    &.second {
+      transform: translatex(-50%) rotate(4deg);
+    }
+  }
+
+  blockquote {
+    padding: $double-spacing;
+    background-color: transparentize($white, 0.5);
+    font-weight: $font-weight--light;
+  }
+}

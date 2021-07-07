@@ -1,0 +1,14 @@
+/**
+ * @file
+ * 01-atoms/01-text/_links.scss
+ */
+
+a {
+  color: $lightest-green;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+  }
+}

@@ -1,0 +1,60 @@
+/**
+* @file
+* 01-atoms/circle-photo/_circle-photo.scss
+*/
+$small-radius--small: 150px;
+$small-radius--regluar: 200px;
+$large-radius--small: 180px;
+$large-radius--regular: 300px;
+
+.circle-photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto $double-spacing;
+  box-shadow: $shadow;
+
+  &.left {
+    @media (min-width: 581px) {
+      float: left;
+      margin-top: $double-spacing;
+      margin-right: $double-spacing;
+
+      shape-outside: circle();
+    }
+  }
+
+  &.small {
+    width: $small-radius--small;
+    height: $small-radius--small;
+
+    @media (min-width: $medium) {
+      width: $small-radius--regluar;
+      height: $small-radius--regluar;
+    }
+  }
+
+  &.large {
+    width: $large-radius--small;
+    height: $large-radius--small;
+
+    @media (min-width: $medium) {
+      width: $large-radius--regular;
+      height: $large-radius--regular;
+    }
+  }
+}
+
+.nametag {
+  position: absolute;
+  right: 0;
+  bottom: 15%;
+  display: block;
+  width: 100%;
+  padding: $half-spacing;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background: transparentize($black, 0.1);
+  font-family: $title-font;
+}

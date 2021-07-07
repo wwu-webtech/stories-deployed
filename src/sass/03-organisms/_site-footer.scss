@@ -1,0 +1,14 @@
+/**
+* @file
+* organisms/site-footer/_site-footer.scss
+*/
+
+.site-footer {
+  padding: $double-spacing;
+  background-color: $blue;
+
+  > div {
+    max-width: $max-content-width;
+    margin: auto;
+  }
+}

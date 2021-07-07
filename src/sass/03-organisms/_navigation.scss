@@ -1,0 +1,148 @@
+/**
+* @file
+* 03-organisms/_navigation.scss
+*/
+$menu-width: 200px;
+
+.chapter-navigation-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: $half-spacing;
+  border: none;
+  background: transparentize($darkest-blue, 0.1);
+
+  &:hover,
+  &:focus,
+  &:active {
+    cursor: pointer;
+    transform: none;
+    background: transparentize($darkest-blue, 0.1);
+  }
+
+  @media (min-width: $large) {
+    display: none;
+  }
+}
+
+.chapter-navigation {
+  position: fixed;
+  z-index: 5;
+  width: $menu-width;
+  height: 100vh;
+  padding: $double-spacing $double-spacing $double-spacing 0;
+  transition: all ease 0.2s;
+  background: transparentize($darkest-blue, 0.1);
+  font-size: $p-font-size--smaller;
+
+  @media (min-width: $large) {
+    top: 50%;
+    width: initial;
+    height: initial;
+    transform: translatey(-50%);
+    background-color: transparent;
+  }
+
+  &.open {
+    left: 0;
+
+    .chapter-navigation-toggle {
+      background: transparent;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: transparent;
+      }
+    }
+  }
+
+  &.closed {
+    @media (max-width: $large) {
+      left: calc(-#{$menu-width} + 60px);
+      background-color: transparent;
+    }
+
+    nav {
+      display: none;
+    }
+  }
+
+  h2 {
+    display: inline-block;
+    margin-top: $standard-spacing;
+    margin-bottom: $half-spacing;
+    padding: $standard-spacing;
+    text-align: left;
+    word-spacing: initial;
+    text-transform: none;
+    color: $white;
+    text-shadow: none;
+    font-family: $sans-serif;
+    font-size: $h5-font-size;
+
+    @media (min-width: $medium) {
+      margin-top: 0;
+      border: solid $border-width transparentize($white, 0.2);
+      border-left: none;
+      border-radius: 0 $border-radius--square $border-radius--square 0;
+      background-color: transparentize($darkest-blue, 0.2);
+      font-size: $p-font-size--smaller;
+    }
+  }
+
+  ul {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: white;
+
+    li {
+      padding: $half-spacing 0;
+
+      @media (min-width: $medium) {
+        padding: $standard-spacing 0;
+      }
+    }
+
+    a {
+      display: inline-block;
+      padding: $half-spacing $standard-spacing;
+      text-align: right;
+      text-decoration: none;
+      color: $white;
+      border: solid $border-width transparentize($white, 0.2);
+      border-left: none;
+      border-radius: 0 $border-radius--square $border-radius--square 0;
+
+      &.current {
+        color: $lightest-green;
+      }
+
+      @media (min-width: $medium) {
+        background-color: transparentize($darkest-blue, 0.2);
+      }
+    }
+  }
+}
+
+.chapter {
+  visibility: hidden;
+  transition: all ease 0.2s;
+  opacity: 0;
+
+  .material-icons {
+    position: relative;
+    top: 2px;
+    float: left;
+    font-size: $p-font-size--smaller;
+  }
+}
+
+a:hover .chapter,
+.current .chapter {
+  visibility: visible;
+  opacity: 1;
+}

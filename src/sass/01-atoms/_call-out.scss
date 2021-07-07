@@ -1,0 +1,23 @@
+/**
+* @file
+* 01-atoms/call-out/_call-out.scss
+*/
+.call-out-box {
+  margin-bottom: $double-spacing * 2;
+
+  p {
+    font-weight: $font-weight--regular;
+  }
+
+  &.cse {
+    padding: $standard-spacing;
+    border-radius: $border-radius--square;
+    background-color: mix($blue, $snow-gray, 50%);
+  }
+
+  &.research {
+    margin: 0;
+    padding: $standard-spacing;
+    background-color: $snow-gray;
+  }
+}

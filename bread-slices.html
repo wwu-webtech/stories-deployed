@@ -1,0 +1,104 @@
+<h2>Western and Climate Change</h2>
+<p class="tagline">Ten Stories in Ten Weeks</p>
+
+<p>Each week between the end of February and Earth Day (and the <a href="https://huxley.wwu.edu/50th">50th birthday</a> of Western’s Huxley College of the Environment), Western will reveal a new story about how its faculty, staff and students are working to combat global climate change, from the peaks of the world’s highest mountains to the vast expanses of the open ocean. Come back each week to read how Western is working to make a difference in the most impactful existential threat facing the global community today.</p>
+
+<div class="climate-change-stories-reveal">
+  <ul>
+    <li class="shown"><strong><a href="https://wwu.edu/climatechange">Chapter 1</a></strong></li>
+    <li class="shown"><strong><a href="https://wwu.edu/climatechange#chapter-02">Chapter 2</a></strong></li>
+    <li class="shown"><strong><a href="https://wwu.edu/climatechange#chapter-03">Chapter 3</a></strong></li>
+    <li class="shown"><strong><a href="https://wwu.edu/climatechange#chapter-04">Chapter 4</a></strong></li>
+    <li class="shown"><strong><a href="https://wwu.edu/climatechange#chapter-05">Chapter 5</a></strong></li>
+    <li class="shown"><strong><a href="https://wwu.edu/climatechange#chapter-06">Chapter 6</a></strong></li>
+    <li class="shown"><strong><a href="https://wwu.edu/climatechange#chapter-07">Chapter 7</a></strong></li>
+    <li class="shown"><strong><a href="https://wwu.edu/climatechange#chapter-08-anchor">Chapter 8</a></strong></li>
+    <li class="shown"><strong><a href="https://wwu.edu/climatechange#chapter-09">Chapter 9</a></strong></li>
+    <li class="shown"><strong><a href="https://wwu.edu/climatechange#chapter-10">Chapter 10</a></strong></li>
+  </ul>
+</div>
+
+<style>
+.climate-change-stories-reveal ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+}
+
+.climate-change-stories-reveal li {
+  flex: 0 1 calc(10% - 12px);
+  text-align: center;
+}
+
+.climate-change-stories-reveal li.not-shown:before,
+.climate-change-stories-reveal li.shown a:before {
+  display: block;
+  width: 100%;
+  height: 400px;
+  content: "";
+  background-color: #f5f6f7;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.climate-change-stories-reveal li:nth-of-type(1) a:before {
+  background-image: url("https://www.wwu.edu/files/2020-02/snow.png");
+}
+
+.climate-change-stories-reveal li:nth-of-type(2) a:before {
+
+  background-image: url("https://www.wwu.edu/files/2020-02/mountain.png");
+}
+
+.climate-change-stories-reveal li:nth-of-type(3) a:before {
+  background-image: url("https://www.wwu.edu/files/2020-02/glacier.png");
+}
+
+.climate-change-stories-reveal li:nth-of-type(4) a:before {
+  background-image: url("https://www.wwu.edu/files/2020-02/flowers.png");
+}
+
+.climate-change-stories-reveal li:nth-of-type(5) a:before {
+  background-image: url("https://www.wwu.edu/files/2020-02/hillside.png");
+}
+
+.climate-change-stories-reveal li:nth-of-type(6) a:before {
+  background-image: url("https://www.wwu.edu/files/2020-03/streams.png");
+}
+
+.climate-change-stories-reveal li:nth-of-type(7) a:before {
+  background-image: url("https://www.wwu.edu/files/2020-03/town.png");
+}
+
+.climate-change-stories-reveal li:nth-of-type(8) a:before {
+  background-image: url("https://www.wwu.edu/files/2020-03/marsh.png");
+}
+
+.climate-change-stories-reveal li:nth-of-type(9) a:before {
+  background-image: url("https://www.wwu.edu/files/2020-03/shallows.png");
+}
+
+.climate-change-stories-reveal li:nth-of-type(10) a:before {
+  background-image: url("https://www.wwu.edu/files/2020-04/deep.png");
+}
+
+.climate-change-stories-reveal li.not-shown {
+  color: #f5f6f7;
+}
+
+@media (max-width: 800px) {
+  .climate-change-stories-reveal ul {
+    flex-flow: row wrap;
+  }
+  .climate-change-stories-reveal li {
+    flex: 0 1 calc(20% - 12px);
+    margin-bottom: 6px;
+  }
+  .climate-change-stories-reveal li.not-shown:before,
+  .climate-change-stories-reveal li.shown a:before {
+    height: 200px;
+  }
+}
+</style>

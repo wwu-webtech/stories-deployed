@@ -1,0 +1,61 @@
+/**
+* @file
+* 03-organisms/articles/_article.scss
+*/
+
+.article {
+  position: relative;
+  z-index: 2;
+}
+
+article {
+  max-width: $max-content-width;
+  margin-right: $standard-spacing;
+  margin-left: $standard-spacing;
+  padding-bottom: $double-spacing;
+
+  @media (min-width: $medium) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  h2,
+  h3 {
+    text-align: center;
+  }
+}
+
+.article-title {
+  max-width: $max-content-width;
+  margin: auto;
+}
+
+.body {
+  padding-top: $double-spacing;
+  padding-bottom: $double-spacing;
+
+  p {
+    padding-left: $double-spacing;
+    padding-right: $double-spacing;
+  }
+}
+
+.end-credits {
+  margin-top: 12vw;
+  margin-bottom: 4vw;
+
+  h2,
+  .tagline {
+    color: $water-light-blue;
+    text-shadow: none;
+  }
+
+  .credits {
+    color: $white;
+  }
+
+  .thanks {
+    color: $white;
+    font-size: 0.8em;
+  }
+}

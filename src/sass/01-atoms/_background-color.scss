@@ -1,0 +1,124 @@
+/**
+* @file
+* molecules/background-colors/_background-colors.scss
+*/
+
+
+// Base styles for different color backgrounds. Use @include to utilize these styles inside of other components.
+// Note the cascade here, as the blue styles inherit from the gray styles of same shades (EG Dark blue inherits from black, blue inherits from gray, etc.)
+@mixin black-bg {
+  color: $white;
+  background: $black;
+
+  h1 {
+    color: $white;
+    &:after {
+      border-color: $lightest-green;
+    }
+  }
+
+  h2 {
+    color: $white;
+    border-bottom-color: $lightest-green;
+  }
+
+  h3 {
+    color: $lightest-green;
+  }
+
+  h4 {
+    color: $light-green;
+  }
+
+  h5 {
+    color: $white;
+  }
+
+  h6 {
+    color: $white;
+  }
+
+
+  a:not([class]) {
+    color: $light-blue;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $lightest-green;
+      background-color: $darkest-blue;
+    }
+  }
+
+  .menu {
+    li {
+      border-left: solid $border-width $dark-blue;
+      @media (min-width: $medium) {
+        border-left-width: $border-width--thicker;
+      }
+
+      a {
+        color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $lightest-green;
+          background-color: $dark-blue;
+        }
+      }
+    }
+  }
+
+  .social-icon {
+    color: $dark-blue;
+    background-color: $white;
+
+    svg {
+      fill: $black;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $light-green;
+    }
+
+    &:focus {
+      outline-color: $white;
+    }
+  }
+}
+
+@mixin dark-blue-bg {
+  @include black-bg;
+  background: $dark-blue;
+
+  .menu {
+    li {
+      border-left-color: $darkest-blue;
+
+      a {
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $darkest-blue;
+        }
+      }
+    }
+  }
+
+
+  .social-icon {
+    svg {
+      fill: $dark-blue;
+    }
+  }
+}
+
+.black-bg {
+  @include black-bg;
+}
+.dark-blue-bg {
+  @include dark-blue-bg;
+}

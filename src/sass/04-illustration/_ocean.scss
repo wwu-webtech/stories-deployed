@@ -1,0 +1,161 @@
+/**
+* @file
+* 04-illustration/_ocean.scss
+*/
+.waves {
+  margin-bottom: -1px;
+  background-color: $water-light-blue;
+
+  img {
+    width: 102vw;
+    margin-left: -1vw;
+    padding-top: 8vw;
+  }
+}
+
+.shallows {
+  position: relative;
+  height: 20vw;
+  max-height: 200px;
+  background-image: linear-gradient($ocean-light-blue, $ocean-medium-blue);
+
+  img {
+    width: 100%;
+  }
+}
+
+.sand-bank {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.eel-grass {
+  position: absolute;
+  right: 3%;
+  bottom: 2.5%;
+  width: 40%;
+}
+
+.crab {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  width: 10%;
+  max-width: 200px;
+}
+
+.shrimp {
+  position: absolute;
+  right: 27%;
+  bottom: 0;
+  width: 10%;
+  max-width: 200px;
+}
+
+.fish-school--small {
+  position: absolute;
+  right: 10%;
+  transform: scalex(-1);
+}
+
+.fish-break {
+  height: 50vw;
+  padding: $triple-spacing 0;
+  background-color: $ocean-darkest-blue;
+
+  img {
+    width: 100%;
+  }
+}
+
+.fish-school--medium {
+  position: absolute;
+  top: 25%;
+  left: 6%;
+  width: 50vw;
+}
+
+.fish-school--large {
+  position: absolute;
+  right: 6%;
+  bottom: 25%;
+  width: 22vw;
+}
+
+.plankton {
+  position: relative;
+  width: 80vw;
+  max-width: 600px;
+  height: 50vw;
+  max-height: 400px;
+  margin: auto;
+
+  > div {
+    position: absolute;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @media(min-width: 1501px) {
+    position: absolute;
+    top: -7vw;
+    left: -41%;
+  }
+}
+
+.colony {
+  top: 7.5%;
+  right: 5%;
+  width: 35%;
+  max-width: 200px;
+}
+
+.magnify {
+  top: 16%;
+  right: 10%;
+  width: 15%;
+  max-width: 90px;
+}
+
+.lines {
+  top: 12%;
+  right: 21%;
+  width: 45%;
+}
+
+.zoomed {
+  top: 10%;
+  left: 0;
+  width: 55%;
+}
+
+.bottom-of-the-ocean {
+  background-color: $ocean-darkest-blue;
+  padding: $triple-spacing;
+}
+
+.orca {
+  position: relative;
+  z-index: 1;
+  max-width: 160vw;
+  left: -10%;
+
+  img {
+    width: 100%;
+  }
+}
+
+
+.animations-on {
+  .rotate-plankton {
+    animation: plankton-rotate 24s linear infinite;
+  }
+}
+
+@keyframes plankton-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
