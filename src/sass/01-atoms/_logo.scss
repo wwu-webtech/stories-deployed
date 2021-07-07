@@ -30,6 +30,8 @@ $logo-height--stacked--larger: 196px;
   &.make-waves {
     width: $logo-width;
     height: $logo-width;
+    max-width: 30vw;
+    max-height: 30vw;
   }
 
   .cls-1 {

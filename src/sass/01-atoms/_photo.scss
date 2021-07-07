@@ -3,14 +3,22 @@
 * 01-atoms/_photo.scss
 */
 .photo {
-  margin-bottom: $standard-spacing;
+  margin-bottom: $double-spacing;
   position: relative;
 
   img {
     width: 100%;
-    border-radius: $border-radius--square;
     box-shadow: $shadow;
   }
+
+    &.small {
+      max-width: 50%;
+
+      @media (min-width: $medium) {
+        max-width: 40%;
+      }
+    }
+
 
   &.medium {
     max-width: 60%;
@@ -69,6 +77,8 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: $double-spacing;
+  color: $white;
+  padding: $half-spacing $standard-spacing;
   font-size: $p-font-size--smaller;
+  background-color: rgba(0,0,0,0.75);
 }

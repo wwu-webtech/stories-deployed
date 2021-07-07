@@ -2,3 +2,20 @@
 * @file
 * 03-organisms/_chapters.scss
 */
+section {
+  padding: $double-spacing 0;
+}
+
+.bio {
+  padding: $double-spacing;
+  background-color: $lightest-gray;
+
+  @media (min-width: $small) {
+    display: flex;
+  }
+}
+
+.bio .photo {
+  flex: 1 0 50%;
+  margin-right: $double-spacing;
+}

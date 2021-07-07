@@ -33,6 +33,9 @@ main {
 
 .content {
   max-width: $max-content-width;
-  margin-left: 5vw;
   padding: $standard-spacing;
+
+  @media (min-width: $large) {
+    margin-left: 5vw;
+  }
 }

@@ -18,14 +18,14 @@ footer {
   margin: 0;
   padding: $half-spacing;
   border: none;
-  background: transparentize($black, 0.1);
+  background: transparentize($darkest-blue, 0.05);
 
   &:hover,
   &:focus,
   &:active {
     cursor: pointer;
     transform: none;
-    background: transparentize($black, 0.1);
+    background: transparentize($darkest-blue, 0.05);
   }
 
   @media (min-width: $medium) {
@@ -36,12 +36,16 @@ footer {
 .chapter-navigation {
   position: fixed;
   z-index: 5;
+  overflow-y: scroll;
   width: $menu-width;
   height: 100vh;
   padding: $double-spacing $double-spacing $double-spacing 0;
   transition: all ease 0.2s;
-  background: transparentize($black, 0.1);
+  background: transparentize($darkest-blue, 0.05);
   font-size: $p-font-size--smaller;
+
+  scrollbar-color: $dark-blue $darkest-blue;
+  scrollbar-width: auto;
 
   @media (min-width: $medium) {
     width: $menu-width;
@@ -120,6 +124,20 @@ footer {
       }
     }
   }
+
+  /* Works on Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    width: initial;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $darkest-blue;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: $dark-blue;
+  }
 }
 
 .chapter {
@@ -136,15 +154,17 @@ footer {
 }
 
 .chapter-name {
-  grid-area: name;
   transition: font-weight ease 0.2s;
+
+  grid-area: name;
 }
 
 .chapter-author {
-  grid-area: author;
   padding-left: $standard-spacing;
   font-size: 0.8em;
   font-style: italic;
+
+  grid-area: author;
 }
 
 a:hover .chapter,
