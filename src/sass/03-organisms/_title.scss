@@ -3,28 +3,42 @@
 * 03-organisms/_header.scss
 */
 .title {
-  @media (min-width: $large) {
-    min-height: calc(100vh - #{$logo-height--stacked--larger});
-  }
-  min-height: calc(100vh - #{$logo-height--stacked});
+  position: relative;
   padding: $standard-spacing;
   color: $white;
   background-color: $black;
+  @media (min-width: $small) {
+    min-height: 50vh;
+  }
+  @media (min-width: $medium) {
+    min-height: 100vh;
+  }
+
+  h1,
+  p {
+    padding-bottom: 0;
+    text-align: right;
+    text-shadow: -1px -1px 5px rgba(0, 0, 0, 0.1), 1px 1px 4px rgba(0, 0, 0, 0.8);
+  }
 
   .title-text {
-    max-width: $max-content-width;
-    margin: auto;
+    position: relative;
   }
 }
 
-.title-end {
-  background: linear-gradient(to bottom, $black, transparent);
+.acknowledgements {
+  position: relative;
+  color: $white;
+  background-color: black;
+
+  h2 {
+    color: $blue;
+  }
 }
 
-
 .western-home-link {
-  width: $logo-width;
   display: block;
+  width: $logo-width;
   margin-top: 48px;
   margin-bottom: 10vw;
   margin-left: 50%;

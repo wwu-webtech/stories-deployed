@@ -4,6 +4,7 @@
 */
 .photo {
   margin-bottom: $standard-spacing;
+  position: relative;
 
   img {
     width: 100%;
@@ -65,8 +66,9 @@
 }
 
 .photo-caption {
-  font-style: italic;
-  margin-bottom: -$double-spacing;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   padding: $double-spacing;
   font-size: $p-font-size--smaller;
 }

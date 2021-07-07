@@ -15,7 +15,6 @@ h4,
 h5,
 h6 {
   margin: $heading-margin-top 0 $heading-margin-bottom;
-  text-align: center;
   color: $blue;
   font-family: $condensed;
   line-height: $heading-line-height;
@@ -39,20 +38,18 @@ h2 {
   max-width: $max-content-width;
   margin: auto;
   padding-bottom: $double-spacing;
-  padding-left: $standard-spacing;
   word-spacing: -$half-spacing;
   text-transform: uppercase;
   color: $darkest-blue;
-  text-shadow: -1px -1px 0 transparentize($white, 0.5);
   font-family: $title-font;
-  font-size: $h2-font-size--largest;
+  font-size: $h2-font-size;
   font-weight: $font-weight--bold;
   line-height: 1em;
   @media (max-width: $small) {
-    font-size: $min-base-font-size--largest;
+    font-size: $min-base-font-size;
   }
   @media (min-width: $large) {
-    font-size: $h2-font-size--max--largest;
+    font-size: $h2-font-size--max;
   }
 }
 h3 {
@@ -91,12 +88,6 @@ h5 + h6 {
   margin-top: 0;
 }
 
-main {
-  h2 {
-    padding-bottom: ($standard-spacing * 1.5);
-  }
-}
-
 /* Helper to resize headings. Only applies at medium breakpoints. */
 .font-size--smaller {
   h1 {
@@ -107,7 +98,6 @@ main {
   }
 
   h2 {
-    padding-bottom: none;
     border-bottom: none;
     font-size: $h2-font-size--smaller;
     @media (min-width: $large) {
@@ -145,9 +135,15 @@ main {
 }
 
 .tagline {
-  text-align: center;
+  margin-bottom: $double-spacing;
   font-family: $sans-serif;
-  font-size: $h3-font-size--larger;
-  font-weight: $font-weight--bold;
+  font-size: $h3-font-size--smaller;
+  font-weight: $font-weight--semibold;
+  color: $dark-blue;
+  font-style: italic;
   line-height: 1em;
+
+  @media (min-width: $large) {
+    font-size: $h3-font-size--max--smaller;
+  }
 }

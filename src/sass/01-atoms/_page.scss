@@ -30,3 +30,9 @@ main {
   height: 1px;
   word-wrap: normal;
 }
+
+.content {
+  max-width: $max-content-width;
+  margin-left: 5vw;
+  padding: $standard-spacing;
+}

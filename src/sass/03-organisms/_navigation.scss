@@ -2,7 +2,14 @@
 * @file
 * 03-organisms/_navigation.scss
 */
-$menu-width: 200px;
+$menu-width: 16rem;
+
+.main-content,
+footer {
+  @media (min-width: $medium) {
+    margin-left: $menu-width;
+  }
+}
 
 .chapter-navigation-toggle {
   position: absolute;
@@ -11,17 +18,17 @@ $menu-width: 200px;
   margin: 0;
   padding: $half-spacing;
   border: none;
-  background: transparentize($darkest-blue, 0.1);
+  background: transparentize($black, 0.1);
 
   &:hover,
   &:focus,
   &:active {
     cursor: pointer;
     transform: none;
-    background: transparentize($darkest-blue, 0.1);
+    background: transparentize($black, 0.1);
   }
 
-  @media (min-width: $large) {
+  @media (min-width: $medium) {
     display: none;
   }
 }
@@ -33,15 +40,12 @@ $menu-width: 200px;
   height: 100vh;
   padding: $double-spacing $double-spacing $double-spacing 0;
   transition: all ease 0.2s;
-  background: transparentize($darkest-blue, 0.1);
+  background: transparentize($black, 0.1);
   font-size: $p-font-size--smaller;
 
-  @media (min-width: $large) {
-    top: 50%;
-    width: initial;
-    height: initial;
-    transform: translatey(-50%);
-    background-color: transparent;
+  @media (min-width: $medium) {
+    width: $menu-width;
+    background-color: $darkest-blue;
   }
 
   &.open {
@@ -59,13 +63,14 @@ $menu-width: 200px;
   }
 
   &.closed {
-    @media (max-width: $large) {
+    @media (max-width: $medium) {
       left: calc(-#{$menu-width} + 60px);
       background-color: transparent;
-    }
 
-    nav {
-      display: none;
+
+      nav {
+        display: none;
+      }
     }
   }
 
@@ -81,15 +86,6 @@ $menu-width: 200px;
     text-shadow: none;
     font-family: $sans-serif;
     font-size: $h5-font-size;
-
-    @media (min-width: $medium) {
-      margin-top: 0;
-      border: solid $border-width transparentize($white, 0.2);
-      border-left: none;
-      border-radius: 0 $border-radius--square $border-radius--square 0;
-      background-color: transparentize($darkest-blue, 0.2);
-      font-size: $p-font-size--smaller;
-    }
   }
 
   ul {
@@ -99,30 +95,28 @@ $menu-width: 200px;
     list-style: none;
     color: white;
 
-    li {
-      padding: $half-spacing 0;
-
-      @media (min-width: $medium) {
-        padding: $standard-spacing 0;
-      }
-    }
-
     a {
-      display: inline-block;
+      display: grid;
       padding: $half-spacing $standard-spacing;
-      text-align: right;
       text-decoration: none;
       color: $white;
-      border: solid $border-width transparentize($white, 0.2);
-      border-left: none;
-      border-radius: 0 $border-radius--square $border-radius--square 0;
+      font-weight: lighter;
+
+      grid-template-areas: "icon name"
+      "icon author";
+      grid-template-columns: $p-font-size--smaller auto;
+      grid-template-rows: auto auto;
 
       &.current {
         color: $lightest-green;
       }
 
-      @media (min-width: $medium) {
-        background-color: transparentize($darkest-blue, 0.2);
+      &:active,
+      &:hover,
+      &:focus {
+        .chapter-name {
+          font-weight: bold;
+        }
       }
     }
   }
@@ -141,7 +135,21 @@ $menu-width: 200px;
   }
 }
 
+.chapter-name {
+  grid-area: name;
+  transition: font-weight ease 0.2s;
+}
+
+.chapter-author {
+  grid-area: author;
+  padding-left: $standard-spacing;
+  font-size: 0.8em;
+  font-style: italic;
+}
+
 a:hover .chapter,
+a:focus .chapter,
+a:active .chapter,
 .current .chapter {
   visibility: visible;
   opacity: 1;
