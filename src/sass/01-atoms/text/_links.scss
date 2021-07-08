@@ -4,11 +4,17 @@
  */
 
 a {
-  color: $lightest-green;
+  color: $blue;
+  transition: 0.2s ease all;
 
   &:hover,
   &:focus,
   &:active {
-    color: $white;
+    color: $green;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: #9a0fa8;
   }
 }

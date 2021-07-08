@@ -33,17 +33,7 @@
   }
 
   &.full {
-    width: 100vw;
-    margin-left: -$standard-spacing;
-    margin-bottom: $double-spacing * 2;
-
-    img {
-      border-radius: 0;
-    }
-
-    @media (min-width: $max-content-width) {
-      margin-left: calc((100vw - #{$max-content-width}) / -2);
-    }
+    width: 100%;
   }
 
   &.center {
