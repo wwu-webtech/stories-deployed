@@ -5,11 +5,22 @@
 
 .site-footer {
   padding: $double-spacing;
-  background-color: $blue;
   color: $white;
+  background-color: $blue;
 
   > div {
     max-width: $max-content-width;
     margin: auto;
+  }
+
+  a {
+    color: $white;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $darkest-blue;
+      background-color: $light-gray;
+    }
   }
 }

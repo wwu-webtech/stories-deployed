@@ -18,3 +18,22 @@ a {
     color: #9a0fa8;
   }
 }
+
+.skip-link {
+  &.focusable {
+    &:focus {
+      position: absolute !important;
+      z-index: 6;
+      top: 0;
+      left: $standard-spacing;
+      clip: initial; // IE support
+      clip-path: initial;
+      width: inherit;
+      height: inherit;
+      padding: $standard-spacing;
+      color: $black;
+      outline-color: $white;
+      background: $light-green;
+    }
+  }
+}
