@@ -23,7 +23,3 @@ Thumbs.db
 *.rar
 *.tar
 *.zip
-
-# Generated CSS
-*.css
-*.css.map
